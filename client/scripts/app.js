@@ -60,7 +60,7 @@ app.fetch = function() {
   $.ajax({
     // This is the url you should use to communicate with the parse API server.
     url: app.server,
-    data: {order: "-createdAt"},
+    data: {order: '-createdAt'},
     type: 'GET',
     contentType: 'application/json',
     success: function (data) {
@@ -99,6 +99,6 @@ app.addNewMessages = function(array) {
     if (!app.messages[message.objectId]) {
       app.messages[message.objectId] = message;
     }
-  })
+  });
 };
 app.fetch();
