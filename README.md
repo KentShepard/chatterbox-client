@@ -62,7 +62,7 @@ Open up client/scripts/app.js and start coding.
 
    * [ ] Install [ESAPI library](https://github.com/ESAPI/owasp-esapi-js) to handle escaping
      * [ ]  `bower install owasp-esapi-js`
-   * [ ] Specify UTF8 in the head of the HTML.  
+   * [ ] Specify UTF8 in the head of the HTML.
 
    ```html
    <head>
