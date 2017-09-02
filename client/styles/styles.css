@@ -17,6 +17,7 @@ body {
 
 #chats {
     width: initial;
+    padding: 20px 30px;
 }
 
 #main h1 {
@@ -91,4 +92,15 @@ form input[type=text] {
     color: #fff;
     background-color: #0090da;
 }
+.username {
+display: block;
+    margin-bottom: 10px;
+}
 
+.message-block {
+    padding: 10px;
+}
+
+.message {
+
+}

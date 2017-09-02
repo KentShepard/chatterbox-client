@@ -100,7 +100,7 @@ describe('chatterbox', function() {
 
         app.renderMessage({
           username: 'Mel Brooks',
-          text: 'I didn\'t get a harumph outa that guy.!',
+          text: 'I didn\'t get a harumph outa that guy!',
           roomname: 'lobby'
         });
 
