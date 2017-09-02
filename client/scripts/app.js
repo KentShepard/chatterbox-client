@@ -1,13 +1,20 @@
 const app = {};
 app.server = 'http://parse.hrr.hackreactor.com/chatterbox/classes/messages';
-app.handleUsernameClick = function(){};
-app.handleSubmit = function(){};
+app.handleUsernameClick = function() {};
+app.handleSubmit = function() {
+  var message = {
+    username: app.parseUser(window.location.search),
+    text: $('input[name=message]').val(),
+    roomname: $('#roomSelect').val()
+  };
+  app.send(message);
+};
 
 $(document).ready(function() {
   $('#main').on('click', '.username', function() {
     app.handleUsernameClick();
   });
-  $('#send').on('submit', '.submit', function() {
+  $('form').on('submit', function() {
     app.handleSubmit();
   });
 });
@@ -17,6 +24,7 @@ app.init = function() {
 };
 
 app.send = function(message) {
+
   $.ajax({
     // This is the url you should use to communicate with the parse API server.
     url: app.server,
@@ -55,3 +63,7 @@ app.clearMessages = () => $('#chats').empty();
 app.renderMessage = (message) => $('#chats').append(`<div class="message-block" data-username="${message.username}" data-room="${message.roomname}"><a><span class="username">${message.username}</span></a><span class="message">${message.text}</span></div>`);
 
 app.renderRoom = (room) => $('#roomSelect').append(`<div>${room}</div>`);
+
+app.parseUser = function(username) {
+  username.substr(username.indexOf('=') + 1);
+};

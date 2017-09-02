@@ -24,11 +24,14 @@
   <body>
   <div id="main">
     <h1>chatterbox</h1>
-    <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
+    <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
     <div id="rooms">
       Room:
-      <select id="roomSelect">
-        <div>superLobby</div></select>
+      <select id="roomSelect" name="select">
+        <option value="value1">Value 1</option>
+        <option selected value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
     </div>
     <form action="#" id="send" method="post">
       <input type="text" name="message" id="message">
