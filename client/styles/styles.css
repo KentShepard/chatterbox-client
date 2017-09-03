@@ -18,6 +18,7 @@ body {
 #chats {
     width: initial;
     padding: 20px 30px;
+    border: none;
 }
 
 #main h1 {
@@ -89,8 +90,7 @@ form input[type=text] {
 }
 
 .friend {
-    color: #fff;
-    background-color: #0090da;
+    font-weight: bold;
 }
 .username {
 display: block;
@@ -99,8 +99,16 @@ display: block;
 
 .message-block {
     padding: 10px;
+    border: 1px solid lightslategray;
+    border-bottom: 0;
 }
 
 .message {
+  display: block;
+    word-wrap: break-word;
 
+}
+
+.hidden {
+    display: none;
 }
